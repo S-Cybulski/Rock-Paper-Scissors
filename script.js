@@ -19,11 +19,11 @@ function playRound(playerSelection, computerSelection){
 
     playerSelection = capitalise(playerSelection)
 
-    switch (playerSelection | computerSelection){
-        case playerSelection == computerSelection:
+    switch (playerSelection){
+        case computerSelection:
             return "Tie!"
 
-        case playerSelection == "Rock":
+        case "Rock":
             if (computerSelection == "Paper"){
                 return "You lose! Paper beats Rock.";
             }
@@ -31,7 +31,7 @@ function playRound(playerSelection, computerSelection){
                 return "You win! Rock beats Scissors.";
             }
 
-        case playerSelection == "Paper":
+        case "Paper":
             if (computerSelection == "Scissors"){
                 return "You lose! Scissors beats Paper.";
             }
@@ -39,7 +39,7 @@ function playRound(playerSelection, computerSelection){
                 return "You win! Paper beats Rock.";
             }
 
-        case playerSelection == "Scissors":
+        case "Scissors":
             if (computerSelection == "Rock"){
                 return "You lose! Rock beats Scissors.";
             }
