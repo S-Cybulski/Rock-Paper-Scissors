@@ -15,8 +15,8 @@ function getComputerChoice(){
     }
 }
 
-function playGame(playerSelection, computerSelection){
-    
+function playRound(playerSelection, computerSelection){
+
     playerSelection = capitalise(playerSelection)
 
     switch (playerSelection | computerSelection){
@@ -25,28 +25,31 @@ function playGame(playerSelection, computerSelection){
 
         case playerSelection == "Rock":
             if (computerSelection == "Paper"){
-                return "You lose! Paper beats Rock."
+                return "You lose! Paper beats Rock.";
             }
             else {
-                return "You win! Rock beats Scissors."
+                return "You win! Rock beats Scissors.";
             }
 
         case playerSelection == "Paper":
             if (computerSelection == "Scissors"){
-                return "You lose! Scissors beats Paper."
+                return "You lose! Scissors beats Paper.";
             }
             else {
-                return "You win! Paper beats Rock."
+                return "You win! Paper beats Rock.";
             }
 
         case playerSelection == "Scissors":
             if (computerSelection == "Rock"){
-                return "You lose! Rock beats Scissors."
+                return "You lose! Rock beats Scissors.";
             }
             else {
-                return "You win! Scissors beats Paper."
+                return "You win! Scissors beats Paper.";
             }
     }
 }
 
-console.log(getComputerChoice());
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
