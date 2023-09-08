@@ -74,4 +74,4 @@ function game(){
 let computerScore = 0;
 let playerScore = 0;
 
-game();
+//game();
