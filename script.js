@@ -75,3 +75,12 @@ let computerScore = 0;
 let playerScore = 0;
 
 //game();
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+
+    button.addEventListener('click', () => {
+        console.log(playRound(button.id, getComputerChoice()));
+    });
+});
