@@ -55,24 +55,6 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-function game(){
-    while (computerScore < 5 && playerScore < 5){
-        let playerSelection = prompt("Rock, Paper, Scissors?");
-        let computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-    }
-
-    if (computerScore === 5){
-        console.log("Computer Wins!")
-    }
-
-    else {
-        console.log("Player Wins!")
-    }
-}
-
-//game();
-
 let computerScore = 0;
 let playerScore = 0;
 
@@ -95,22 +77,34 @@ const computerScoreDisplay = document.createElement('div');
 computer.classList.add('computerScore');
 computerScoreDisplay.textContent = `${computerScore}`;
 
+const winnerAnnoucement = document.createElement('div');
+winnerAnnoucement.classList.add('winnerAnnoucement');
+
 buttons.forEach((button) => {
 
     button.addEventListener('click', () => {
-        console.log(playRound(button.id, getComputerChoice()));
+        winnerAnnoucement.textContent = `${playRound(button.id, getComputerChoice())}`;
 
-        console.log(playerScoreDisplay);
+        if (computerScore === 5){
+            winnerAnnoucement.textContent = "Computer Wins!";
+            computerScore = 0;
+            playerScore = 0;
+        }
+    
+        else if (playerScore === 5){
+            winnerAnnoucement.textContent = "Player Wins!";
+            computerScore = 0;
+            playerScore = 0;
+        }
         
         computerScoreDisplay.textContent = `${computerScore}`;
         playerScoreDisplay.textContent = `${playerScore}`;
-
-        //console.log(computerScoreDisplay.textContent)
 
     });
 });
 
 scoreboard.appendChild(player);
-scoreboard.appendChild(playerScoreDisplay)
+scoreboard.appendChild(playerScoreDisplay);
 scoreboard.appendChild(computer);
-scoreboard.appendChild(computerScoreDisplay)
+scoreboard.appendChild(computerScoreDisplay);
+scoreboard.appendChild(winnerAnnoucement);
