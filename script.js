@@ -71,16 +71,46 @@ function game(){
     }
 }
 
+//game();
+
 let computerScore = 0;
 let playerScore = 0;
 
-//game();
-
 const buttons = document.querySelectorAll('button');
+const scoreboard = document.querySelector('.scoreboard');
+
+const player = document.createElement('div');
+player.classList.add('playerScore');
+player.textContent = 'Player';
+
+const playerScoreDisplay = document.createElement('div');
+player.classList.add('playerScore');
+playerScoreDisplay.textContent = `${playerScore}`;
+
+const computer = document.createElement('div');
+computer.classList.add('computerScore');
+computer.textContent = 'Computer';
+
+const computerScoreDisplay = document.createElement('div');
+computer.classList.add('computerScore');
+computerScoreDisplay.textContent = `${computerScore}`;
 
 buttons.forEach((button) => {
 
     button.addEventListener('click', () => {
         console.log(playRound(button.id, getComputerChoice()));
+
+        console.log(playerScoreDisplay);
+        
+        computerScoreDisplay.textContent = `${computerScore}`;
+        playerScoreDisplay.textContent = `${playerScore}`;
+
+        //console.log(computerScoreDisplay.textContent)
+
     });
 });
+
+scoreboard.appendChild(player);
+scoreboard.appendChild(playerScoreDisplay)
+scoreboard.appendChild(computer);
+scoreboard.appendChild(computerScoreDisplay)
