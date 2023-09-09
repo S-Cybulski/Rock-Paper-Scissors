@@ -60,27 +60,33 @@ let playerScore = 0;
 
 const buttons = document.querySelectorAll('button');
 const scoreboard = document.querySelector('.scoreboard');
+const computerScoreboard = document.querySelector('.computerScoreboard');
+const playerScoreboard = document.querySelector('.playerScoreboard');
+const announcement = document.querySelector('.announcement');
 
 const player = document.createElement('div');
-player.classList.add('playerScore');
+player.classList.add('player');
 player.textContent = 'Player';
 
 const playerScoreDisplay = document.createElement('div');
-player.classList.add('playerScore');
+playerScoreDisplay.classList.add('playerScore');
 playerScoreDisplay.textContent = `${playerScore}`;
 
 const computer = document.createElement('div');
-computer.classList.add('computerScore');
+computer.classList.add('computer');
 computer.textContent = 'Computer';
 
 const computerScoreDisplay = document.createElement('div');
-computer.classList.add('computerScore');
+computerScoreDisplay.classList.add('computerScore');
 computerScoreDisplay.textContent = `${computerScore}`;
 
 const winnerAnnoucement = document.createElement('div');
 winnerAnnoucement.classList.add('winnerAnnoucement');
+winnerAnnoucement.textContent = "Press button to play!";
+
 
 buttons.forEach((button) => {
+    //button.style.cssText = 'display: flex; flex-direction: column;'
 
     button.addEventListener('click', () => {
         winnerAnnoucement.textContent = `${playRound(button.id, getComputerChoice())}`;
@@ -103,8 +109,8 @@ buttons.forEach((button) => {
     });
 });
 
-scoreboard.appendChild(player);
-scoreboard.appendChild(playerScoreDisplay);
-scoreboard.appendChild(computer);
-scoreboard.appendChild(computerScoreDisplay);
-scoreboard.appendChild(winnerAnnoucement);
+playerScoreboard.appendChild(player);
+playerScoreboard.appendChild(playerScoreDisplay);
+computerScoreboard.appendChild(computer);
+computerScoreboard.appendChild(computerScoreDisplay);
+announcement.appendChild(winnerAnnoucement);

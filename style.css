@@ -1,0 +1,53 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.scoreboard,
+.announcement {
+    background-color: #B2BF88;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+}
+
+.computerScoreboard,
+.playerScoreboard {
+    display: flex;
+    flex-direction: column;
+    max-width: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: pink;
+}
+
+.computer,
+.player {
+    display: flex;
+}
+
+.playerScore,
+.computerScore {
+    display: flex;
+    background-color: blue;
+    font-size: 48px;
+}
+
+.playerChoiceButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 10px;
+}
+
+button {
+    display: flex;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
