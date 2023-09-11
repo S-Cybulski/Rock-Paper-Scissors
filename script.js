@@ -108,7 +108,7 @@ buttons.forEach((button) => {
         
         computerScoreDisplay.textContent = `${computerScore}`;
         playerScoreDisplay.textContent = `${playerScore}`;
-
+        
     });
 });
 
