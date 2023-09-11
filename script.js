@@ -109,8 +109,8 @@ buttons.forEach((button) => {
     });
 });
 
-playerScoreboard.appendChild(player);
 playerScoreboard.appendChild(playerScoreDisplay);
-computerScoreboard.appendChild(computer);
+playerScoreboard.appendChild(player);
 computerScoreboard.appendChild(computerScoreDisplay);
+computerScoreboard.appendChild(computer);
 announcement.appendChild(winnerAnnoucement);

@@ -4,11 +4,17 @@ body {
 
 .scoreboard,
 .announcement {
-    background-color: #B2BF88;
+    /* background-color: #B2BF88; */
     display: flex;
     flex-direction: row;
     gap: 50px;
     justify-content: center;
+    padding: 10px;
+    gap: 80px;
+}
+
+.announcement {
+    font-size: 24px;
 }
 
 .computerScoreboard,
@@ -19,19 +25,25 @@ body {
     justify-content: center;
     align-items: center;
     margin: 10px;
-    background-color: pink;
 }
 
 .computer,
 .player {
     display: flex;
+    font-size: 20px;
 }
 
 .playerScore,
 .computerScore {
     display: flex;
-    background-color: blue;
-    font-size: 48px;
+    background-color: lightgray;
+    font-size: 72px;
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 }
 
 .playerChoiceButtons {
