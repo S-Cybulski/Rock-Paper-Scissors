@@ -90,14 +90,17 @@ buttons.forEach((button) => {
 
     button.addEventListener('click', () => {
         winnerAnnoucement.textContent = `${playRound(button.id, getComputerChoice())}`;
+        winnerAnnoucement.style = "color: black; font-weight: normal;";
 
         if (computerScore === 5){
+            winnerAnnoucement.style = "color: red; font-weight: bold;";
             winnerAnnoucement.textContent = "Computer Wins!";
             computerScore = 0;
             playerScore = 0;
         }
     
         else if (playerScore === 5){
+            winnerAnnoucement.style = "color: green; font-weight: bold;";
             winnerAnnoucement.textContent = "Player Wins!";
             computerScore = 0;
             playerScore = 0;
