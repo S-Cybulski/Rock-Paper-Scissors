@@ -7,7 +7,6 @@ body {
     /* background-color: #B2BF88; */
     display: flex;
     flex-direction: row;
-    gap: 50px;
     justify-content: center;
     padding: 10px;
     gap: 80px;
@@ -25,25 +24,27 @@ body {
     justify-content: center;
     align-items: center;
     margin: 10px;
+    font-weight: 300;
 }
 
 .computer,
 .player {
     display: flex;
     font-size: 20px;
+    font-weight: 300;
 }
 
 .playerScore,
 .computerScore {
     display: flex;
-    background-color: lightgray;
+    background-color: wheat;
     font-size: 72px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 100px;
     height: 100px;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 30px;
 }
 
 .playerChoiceButtons {
